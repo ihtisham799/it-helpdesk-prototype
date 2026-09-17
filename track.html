@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Ticket - IT Helpdesk</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>IT HELPDESK</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Problem</a>
+            <a href="track.html">Track Ticket</a>
+            <a href="dashboard.html">IT Dashboard</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <section class="track-section">
+
+        <h2>Track Your Ticket</h2>
+
+        <p>Enter your ticket ID to check the current status.</p>
+
+        <form id="track-form">
+
+            <label for="ticket-id">Ticket ID</label>
+
+            <input
+                type="text"
+                id="ticket-id"
+                name="ticket-id"
+                placeholder="e.g. IT-0001"
+            >
+
+            <button type="submit">Track Ticket</button>
+
+        </form>
+
+        <div class="ticket-status" id="ticket-result">
+
+
+        </div>
+
+    </section>
+
+</main>
+
+    
+
+</body>
+
+</html>

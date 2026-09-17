@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Problem - IT Helpdesk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>IT HELPDESK</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Problem</a>
+            <a href="track.html">Track Ticket</a>
+            <a href="dashboard.html">IT Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="report-section">
+            <h2>Report a Problem</h2>
+            <p>Tell us about the technical issue you're experiencing.</p>
+            <form id="report-form" novalidate>
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                    <option value="">Select Location</option>
+                    <option value="it-admin">IT Admin</option>
+                    <option value="client-office">Client Office</option>
+                    <option value="epc-building">EPC Building</option>
+                    <option value="security-room">Security Room</option>
+                    <option value="finance-office">Finance Office</option>
+                    <option value="conference-room">Conference Room</option>
+                    <option value="qc-dc-office">QC/DC Office</option>
+                    <option value="coordinator-office">Coordinator Office</option>
+                    <option value="warehouse">Warehouse</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select category</option>
+                            <option value="Hardware">Hardware</option>
+                            <option value="Software">Software</option>
+                            <option value="Network">Network</option>
+                            <option value="Access">Access</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                            <option value="Urgent">Urgent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="device">Device</label>
+                <input type="text" id="device" name="device" placeholder="e.g. CCTV Camera, Printer, RFID Reader" required>
+
+                <label for="description">Problem Description</label>
+                <textarea id="description" name="description" placeholder="Describe the problem..." required></textarea>
+                <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
+                <button type="submit">Submit Ticket</button>
+            </form>
+
+            <div class="confirmation" id="confirmation">
+                <h2>Ticket Submitted Successfully</h2>
+                <p>Your ticket ID is:</p>
+                <strong id="ticket-number">IT-0001</strong>
+                <p>Please save this ID to track your ticket.</p>
+                <a href="track.html">Track Ticket</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

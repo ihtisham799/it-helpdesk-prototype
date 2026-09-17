@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Dashboard - IT Helpdesk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>IT HELPDESK</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Problem</a>
+            <a href="track.html">Track Ticket</a>
+            <a href="dashboard.html">IT Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard">
+            <div class="dashboard-heading">
+                <div>
+                    <h2>IT Dashboard</h2>
+                    <p>Review and update submitted support requests.</p>
+                </div>
+                <div class="dashboard-actions">
+                    <span class="ticket-count" id="ticket-count">0 tickets</span>
+                    <button class="reset-button" id="reset-demo-data" type="button">Reset Demo Data</button>
+                </div>
+            </div>
+            <div class="dashboard-summary" aria-label="Ticket summary">
+                <div class="summary-card"><span>Total tickets</span><strong id="summary-total">0</strong></div>
+                <div class="summary-card summary-open"><span>Open</span><strong id="summary-open">0</strong></div>
+                <div class="summary-card summary-pending"><span>Pending / In progress</span><strong id="summary-pending">0</strong></div>
+                <div class="summary-card summary-closed"><span>Closed</span><strong id="summary-closed">0</strong></div>
+            </div>
+            <div class="dashboard-filters" aria-label="Ticket filters">
+                <input type="search" id="ticket-search" placeholder="Search by ticket, device, or location">
+                <select id="priority-filter">
+                    <option value="">All priorities</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+                <select id="category-filter">
+                    <option value="">All categories</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Network">Network</option>
+                    <option value="Access">Access</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="dashboard-tabs" role="tablist" aria-label="Ticket status">
+                <button id="active-tab" class="is-active" type="button" role="tab" aria-selected="true">Active Tickets</button>
+                <button id="closed-tab" type="button" role="tab" aria-selected="false">Closed Tickets</button>
+            </div>
+            <div class="active-tickets" id="active-tickets"></div>
+            <div class="closed-tickets" id="closed-tickets" hidden><h3>Closed Tickets</h3></div>
+        </section>
+    </main>
+</body>
+</html>
